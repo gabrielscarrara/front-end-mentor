@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap'); /*importa as fontes do site fonts. google. com */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { /*cria nomes de fontes customizadas*/
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+    }
+
+img { /* é a imagem do QRcode*/ 
+    max-width: 100%; /* pra não passar do corpo*/
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /*importado do site google fonts, em CSS rules to specify families */
+    font-size: 15px;
+    background-color: var(--light-gray);
+    display: flex; /* Torna o elemento body em um flex container, podendo ser manipulado todos os elementos filhos desse flex container com propriedades novas */
+    flex-direction: column; /* Especifica a direção dos itens flexíveis, column coloca eles um em cima do outro */
+    align-items: center; /* Essa propriedade ajusta verticalmente os elementos filhos do flex container*/
+    justify-content: center; /* Os elementos ficam grudados um do lado do outro no meio do flex container. */
+    height: calc(100vh - 1px); /* Altura do elemento (-1px faz com que a altura fique em px, se fosse só em 100vh, no celular iria ficar meio balançando quando movesse a tela*/
+    margin: 1.25rem;
+}
+
+.container {        /* .container é uma classe chamada container.*/ /*É o que abriga o qr e o texto principal*/
+    background-color: var(--white); 
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.05); /*desloc. horizontal da sombra, desloc. vertical da sombra, esfumaçado e cor da sombra */
+    margin-bottom: 2rem; 
+}
+
+.container img { /*se refere ao QRcode*/
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.container h1 { /*Se refere ao texto h1 dentro do container de fundo branco*/
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container p { /*Se refere ao texto p dentro do container de fundo branco*/
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 500px) { /* Para quando aumentar e dimuir o tamanho da página, o conteiner não muda o tamanho*/
+    .container {
+        width: 400px;
+    }
+}
+
